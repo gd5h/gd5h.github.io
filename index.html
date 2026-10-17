@@ -1,70 +1,614 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="سوقك السودان - خدمات الترويج والتسويق على المواقع الإلكترونية ووسائل التواصل الاجتماعي" />
-  <title>سوقك السودان | Sougk alsudan</title>
-  <style>
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f5f7fa;color:#17202a;line-height:1.8}
-    .wrap{max-width:980px;margin:auto;padding:24px}
-    .hero{background:#fff;border-radius:18px;padding:34px;box-shadow:0 10px 30px rgba(0,0,0,.06);margin-top:28px}
-    .brand{font-size:34px;font-weight:700;margin:0 0 6px}
-    .en{direction:ltr;text-align:right;color:#52606d}
-    .tag{display:inline-block;margin-top:12px;padding:7px 12px;border-radius:999px;background:#eef3f8;font-size:14px}
-    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:24px}
-    .card{background:#fff;border-radius:16px;padding:22px;box-shadow:0 8px 24px rgba(0,0,0,.05)}
-    .card h2{margin:0 0 14px;font-size:20px}
-    .row{padding:9px 0;border-bottom:1px solid #edf0f3}.row:last-child{border-bottom:0}
-    .label{font-weight:700} a{color:inherit}
-    footer{text-align:center;color:#6b7280;padding:28px 0 12px;font-size:14px}
-    @media(max-width:700px){.grid{grid-template-columns:1fr}.hero{padding:24px}.brand{font-size:28px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111c32">
+<meta name="facebook-domain-verification" content="8v333ecjhlqzab9a3hf2ybv5k4hdqg">
+
+<title>سوقك | Sougk - التسويق والخدمات الرقمية</title>
+<meta name="description" content="سوقك للخدمات الرقمية والتسويق الإلكتروني والترويج عبر المواقع الإلكترونية ووسائل التواصل الاجتماعي وحلول الأعمال.">
+<meta name="keywords" content="سوقك, Sougk, سوقك للتسويق, سوقك الرقمي, سوقك للأعمال, سوقك للإعلانات, التسويق الإلكتروني">
+
+<style>
+:root{
+  --navy:#111c32;
+  --navy2:#1b2c48;
+  --orange:#ef9b48;
+  --bg:#f5f7fa;
+  --text:#536074;
+  --line:#e3e8ef;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Tahoma,Arial,sans-serif;
+  line-height:1.9;
+  color:var(--text);
+  background:white;
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1150px,92%);margin:auto}
+header{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+.nav{
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.brand{
+  font-size:31px;
+  color:var(--navy);
+  font-weight:900;
+  line-height:1.3;
+}
+.brand small{
+  display:block;
+  font-size:11px;
+  font-weight:normal;
+  letter-spacing:2px;
+  color:#8793a2;
+}
+.links{display:flex;gap:22px;flex-wrap:wrap}
+.links a{font-size:14px;color:var(--navy)}
+.links a:hover{color:#dc842e}
+.hero{
+  background:linear-gradient(115deg,#111c32,#263e5e);
+  color:white;
+  padding:110px 0;
+  position:relative;
+  overflow:hidden;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  width:370px;
+  height:370px;
+  border:65px solid rgba(255,255,255,.035);
+  border-radius:50%;
+  left:-130px;
+  top:-80px;
+  pointer-events:none;
+}
+.hero-inner{position:relative;z-index:1;max-width:780px}
+.kicker{
+  color:var(--orange);
+  font-size:14px;
+  font-weight:bold;
+}
+.hero h1{
+  font-size:clamp(34px,5vw,58px);
+  line-height:1.4;
+  margin:16px 0;
+}
+.hero p{
+  font-size:17px;
+  color:#d2dbe8;
+  max-width:680px;
+}
+.btn{
+  display:inline-block;
+  background:var(--orange);
+  color:#172238;
+  font-size:14px;
+  font-weight:bold;
+  padding:12px 27px;
+  border-radius:6px;
+  margin-top:20px;
+}
+.btn.secondary{
+  background:transparent;
+  border:1px solid #a7b3c5;
+  color:white;
+  margin-right:12px;
+}
+section{padding:82px 0}
+.heading{text-align:center;margin-bottom:40px}
+.heading span{color:#c77a2e;font-size:13px;font-weight:bold}
+.heading h2{
+  color:var(--navy);
+  font-size:32px;
+  margin:5px 0;
+}
+.heading p{margin:0;color:#7d8899}
+.about-layout{
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:55px;
+  align-items:center;
+}
+.about-layout h2{color:var(--navy);font-size:33px}
+.about-panel{
+  background:var(--bg);
+  padding:35px;
+  border-radius:12px;
+  border-top:5px solid var(--orange);
+}
+.about-panel h3{color:var(--navy);margin-bottom:5px}
+.about-panel p{margin-top:0}
+.services{background:var(--bg)}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+.service{
+  background:white;
+  padding:29px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  transition:.2s;
+}
+.service:hover{
+  transform:translateY(-4px);
+  border-color:var(--orange);
+}
+.number{
+  font-size:24px;
+  color:#d18b43;
+  font-weight:bold;
+}
+.service h3{color:var(--navy);font-size:19px;margin:10px 0}
+.service p{font-size:14px;margin:0}
+.names{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.name{
+  background:#f8fafc;
+  border:1px solid var(--line);
+  padding:20px 15px;
+  text-align:center;
+  border-radius:8px;
+  color:var(--navy);
+  font-weight:bold;
+}
+.name.primary{
+  background:var(--navy);
+  color:white;
+  font-size:22px;
+}
+.values{background:var(--bg)}
+.value{
+  background:white;
+  border-right:4px solid var(--orange);
+  padding:25px;
+}
+.value h3{color:var(--navy);margin-top:0}
+.value p{font-size:14px;margin-bottom:0}
+.profile{
+  border:1px solid var(--line);
+  border-radius:12px;
+  overflow:hidden;
+}
+.profile-title{
+  background:var(--navy);
+  color:white;
+  padding:20px 25px;
+  font-size:21px;
+  font-weight:bold;
+}
+.profile-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+.field{
+  padding:17px 23px;
+  border-bottom:1px solid var(--line);
+}
+.field:nth-child(odd){border-left:1px solid var(--line)}
+.field small{display:block;color:#8b97a5}
+.field strong{
+  color:var(--navy);
+  display:block;
+  overflow-wrap:anywhere;
+}
+.field a{color:#256b9a}
+.note{
+  margin-top:17px;
+  font-size:12px;
+  color:#7a8693;
+}
+.cta{
+  background:var(--navy);
+  color:white;
+  text-align:center;
+}
+.cta h2{font-size:34px;margin:0 0 12px}
+.cta p{color:#c4d0de;max-width:680px;margin:auto}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+.contact-card{
+  background:var(--bg);
+  padding:30px;
+  border-radius:9px;
+}
+.contact-card h3{color:var(--navy)}
+.contact-card a{color:#21678f;overflow-wrap:anywhere}
+footer{
+  background:#0d1729;
+  color:#d5deea;
+  padding:45px 0 20px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:30px;
+}
+.footer-grid h3{color:white}
+.footer-grid a{display:block;margin:7px 0;font-size:13px}
+.footer-grid p{font-size:13px;color:#b7c4d2}
+.copyright{
+  border-top:1px solid #304057;
+  margin-top:35px;
+  padding-top:18px;
+  text-align:center;
+  font-size:12px;
+}
+@media(max-width:850px){
+  .nav{flex-direction:column;padding:17px 0}
+  .links{justify-content:center;gap:14px}
+  .about-layout,.contact-grid{grid-template-columns:1fr}
+  .grid,.names{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr}
+}
+@media(max-width:550px){
+  section{padding:55px 0}
+  .hero{padding:70px 0}
+  .grid,.names,.profile-grid{grid-template-columns:1fr}
+  .field:nth-child(odd){border-left:none}
+  .heading h2{font-size:26px}
+  .btn.secondary{margin-right:0}
+}
+</style>
 </head>
+
 <body>
-  <main class="wrap">
-    <section class="hero">
-      <h1 class="brand">سوقك السودان</h1>
-      <div class="en">Sougk alsudan</div>
-      <div class="tag">خدمات الترويج والتسويق على المواقع الإلكترونية ووسائل التواصل الاجتماعي</div>
-      <p style="margin-top:18px">الصفحة الرسمية لعرض معلومات النشاط التجاري وبيانات التواصل والترخيص.</p>
-    </section>
 
-    <section class="grid">
-      <div class="card">
-        <h2>بيانات السجل التجاري</h2>
-        <div class="row"><span class="label">اسم السجل التجاري:</span> سوقك السودان</div>
-        <div class="row"><span class="label">Registration Name:</span> Sougk alsudan</div>
-        <div class="row"><span class="label">رقم السجل التجاري:</span> 1833117</div>
-        <div class="row"><span class="label">حالة السجل:</span> نشط - Active</div>
-        <div class="row"><span class="label">تاريخ التسجيل:</span> 2022/08/20</div>
-        <div class="row"><span class="label">تاريخ الانتهاء:</span> 11/12/2028</div>
+<header>
+  <div class="container nav">
+    <a href="#home" class="brand">
+      سوقك
+      <small>SOUGK COMPANY</small>
+    </a>
+    <nav class="links">
+      <a href="#home">الرئيسية</a>
+      <a href="#about">من نحن</a>
+      <a href="#services">الخدمات</a>
+      <a href="#activities">مجالات العمل</a>
+      <a href="#profile">معلوماتنا</a>
+      <a href="#contact">التواصل</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="kicker">
+        سوقك | Sougk
+      </div>
+      <h1>
+        حلول تسويقية مبتكرة
+        لمستقبل أعمالك
+      </h1>
+      <p>
+        في سوقك نركز على تقديم خدمات الترويج
+        والتسويق الإلكتروني عبر المواقع
+        ومنصات التواصل الاجتماعي،
+        ومساعدة المشاريع على تعزيز
+        حضورها الرقمي والوصول إلى جمهورها.
+      </p>
+      <a href="#services" class="btn">اكتشف خدماتنا</a>
+      <a href="#contact" class="btn secondary">تواصل معنا</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about-layout">
+    <div>
+      <div class="kicker">نبذة عن سوقك</div>
+      <h2>من نحن؟</h2>
+      <p>
+        سوقك اسم تجاري يعمل في مجال خدمات
+        الترويج والتسويق عبر المواقع الإلكترونية
+        ووسائل التواصل الاجتماعي.
+      </p>
+      <p>
+        نهدف إلى مساعدة الأنشطة التجارية
+        وأصحاب المشاريع على التعريف
+        بمنتجاتهم وخدماتهم باستخدام
+        أدوات وأساليب التسويق الرقمي.
+      </p>
+      <p>
+        نؤمن بأهمية تقديم حلول بسيطة وعملية
+        تواكب تطور بيئة الأعمال الإلكترونية.
+      </p>
+    </div>
+    <div class="about-panel">
+      <h3>رؤيتنا</h3>
+      <p>أن يكون سوقك اسماً مميزاً في مجال التسويق والخدمات الرقمية.</p>
+      <h3>رسالتنا</h3>
+      <p>تقديم خدمات تسويقية تساعد الأعمال على النمو والوصول إلى العملاء.</p>
+      <h3>قيمنا</h3>
+      <p>الوضوح، الالتزام، الابتكار، جودة الخدمة والتطوير المستمر.</p>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="heading">
+      <span>ما الذي نقدمه؟</span>
+      <h2>خدمات سوقك</h2>
+      <p>مجموعة من الحلول الرقمية والتسويقية للأعمال</p>
+    </div>
+
+    <div class="grid">
+      <div class="service">
+        <div class="number">01</div>
+        <h3>التسويق الإلكتروني</h3>
+        <p>تطوير حضور الأنشطة التجارية عبر الإنترنت.</p>
+      </div>
+      <div class="service">
+        <div class="number">02</div>
+        <h3>الترويج عبر التواصل الاجتماعي</h3>
+        <p>التعريف بالمنتجات والخدمات على المنصات الاجتماعية.</p>
+      </div>
+      <div class="service">
+        <div class="number">03</div>
+        <h3>الإعلانات الرقمية</h3>
+        <p>إعداد محتوى وحلول إعلانية للأنشطة التجارية.</p>
+      </div>
+      <div class="service">
+        <div class="number">04</div>
+        <h3>التسويق عبر المواقع</h3>
+        <p>تعزيز ظهور المنتجات والخدمات على المواقع الإلكترونية.</p>
+      </div>
+      <div class="service">
+        <div class="number">05</div>
+        <h3>الحملات التسويقية</h3>
+        <p>تنظيم الأفكار والمحتوى والحملات الترويجية الرقمية.</p>
+      </div>
+      <div class="service">
+        <div class="number">06</div>
+        <h3>خدمات المحتوى الرقمي</h3>
+        <p>تطوير المحتوى التعريفي والترويجي للأعمال.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="activities">
+  <div class="container">
+    <div class="heading">
+      <span>مجالاتنا</span>
+      <h2>أسماء الخدمات والأنشطة</h2>
+      <p>مسميات تسويقية وصفية ضمن هوية سوقك</p>
+    </div>
+
+    <div class="names">
+      <div class="name primary">سوقك</div>
+      <div class="name">سوقك للتسويق الإلكتروني</div>
+      <div class="name">سوقك للترويج الرقمي</div>
+      <div class="name">سوقك للإعلانات الإلكترونية</div>
+      <div class="name">سوقك لخدمات الأعمال</div>
+      <div class="name">سوقك للحلول التسويقية</div>
+      <div class="name">سوقك لخدمات المحتوى</div>
+      <div class="name">سوقك للتسويق عبر الإنترنت</div>
+      <div class="name">سوقك للتواصل الرقمي</div>
+      <div class="name">سوقك لإدارة الحملات</div>
+      <div class="name">سوقك للترويج التجاري</div>
+      <div class="name">سوقك للخدمات الإلكترونية</div>
+      <div class="name">سوقك للتسويق الاجتماعي</div>
+      <div class="name">سوقك للحلول الرقمية</div>
+      <div class="name">سوقك لخدمات الترويج</div>
+    </div>
+
+    <p class="note">
+      هذه مسميات وصفية للخدمات، وليست أسماء سجلات تجارية
+      أو تراخيص مستقلة. الاسم الوارد في المستند هو «سوقك».
+    </p>
+  </div>
+</section>
+
+<section class="values">
+  <div class="container">
+    <div class="heading">
+      <span>أسلوب عملنا</span>
+      <h2>لماذا سوقك؟</h2>
+    </div>
+    <div class="grid">
+      <div class="value">
+        <h3>حلول عملية</h3>
+        <p>التركيز على احتياجات الأنشطة التجارية.</p>
+      </div>
+      <div class="value">
+        <h3>وضوح التواصل</h3>
+        <p>تقديم المعلومات والخدمات بصورة منظمة.</p>
+      </div>
+      <div class="value">
+        <h3>التطوير المستمر</h3>
+        <p>الاهتمام بالتقنيات والأساليب الرقمية الحديثة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="profile">
+  <div class="container">
+    <div class="heading">
+      <span>التعريف بالنشاط</span>
+      <h2>معلومات سوقك التجارية</h2>
+      <p>البيانات المدرجة في المستند المقدم</p>
+    </div>
+
+    <div class="profile">
+      <div class="profile-title">
+        سوقك | Sougk
       </div>
 
-      <div class="card">
-        <h2>بيانات الترخيص</h2>
-        <div class="row"><span class="label">رقم الترخيص:</span> L2777445</div>
-        <div class="row"><span class="label">اسم الترخيص:</span> خدمات الترويج والتسويق على المواقع الإلكترونية ووسائل التواصل الاجتماعي (البلديات)</div>
-        <div class="row"><span class="label">License Definition:</span> LD-1673</div>
-        <div class="row"><span class="label">الجهة المرخصة:</span> وزارة التجارة والصناعة وترويج الاستثمار - تراخيص التجارة الإلكترونية</div>
+      <div class="profile-grid">
+        <div class="field">
+          <small>الاسم التجاري</small>
+          <strong>سوقك</strong>
+        </div>
+        <div class="field">
+          <small>الاسم بالإنجليزية</small>
+          <strong>Sougk</strong>
+        </div>
+        <div class="field">
+          <small>رقم السجل التجاري</small>
+          <strong>1836467</strong>
+        </div>
+        <div class="field">
+          <small>رقم الترخيص</small>
+          <strong>L2778756</strong>
+        </div>
+        <div class="field">
+          <small>تاريخ التسجيل</small>
+          <strong>2022/08/20</strong>
+        </div>
+        <div class="field">
+          <small>تاريخ الانتهاء المذكور</small>
+          <strong>11/12/2028</strong>
+        </div>
+        <div class="field">
+          <small>حالة السجل المذكورة</small>
+          <strong>نشط - Active</strong>
+        </div>
+        <div class="field">
+          <small>مجال الترخيص</small>
+          <strong>خدمات الترويج والتسويق على المواقع الإلكترونية ووسائل التواصل الاجتماعي (البلديات)</strong>
+        </div>
+        <div class="field">
+          <small>رقم الجوال</small>
+          <strong dir="ltr">+966501350785</strong>
+        </div>
+        <div class="field">
+          <small>البريد الإلكتروني</small>
+          <strong><a href="mailto:Otp@gd5h.github.io">Otp@gd5h.github.io</a></strong>
+        </div>
+        <div class="field">
+          <small>الموقع الإلكتروني</small>
+          <strong><a href="https://gd5h.github.io">gd5h.github.io</a></strong>
+        </div>
+        <div class="field">
+          <small>العنوان</small>
+          <strong>طريق الملك فهد، شارع العليا، الرياض 12446، المملكة العربية السعودية</strong>
+        </div>
+      </div>
+    </div>
+
+    <p class="note">
+      هذه صفحة تعريفية مستقلة، وليست شهادة ترخيص حكومية
+      أو وسيلة للتحقق الرسمي من بيانات السجل.
+    </p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>طوّر حضور أعمالك مع سوقك</h2>
+    <p>
+      تواصل معنا للتعرف على خدمات التسويق
+      والترويج الإلكتروني والحلول الرقمية.
+    </p>
+    <a href="#contact" class="btn">اتصل بنا</a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="heading">
+      <span>ابقَ على تواصل</span>
+      <h2>تواصل مع سوقك</h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>معلومات الاتصال</h3>
+        <p>الهاتف:
+          <a href="tel:+966501350785" dir="ltr">+966501350785</a>
+        </p>
+        <p>البريد:
+          <a href="mailto:Otp@gd5h.github.io">Otp@gd5h.github.io</a>
+        </p>
+        <p>الموقع:
+          <a href="https://gd5h.github.io">gd5h.github.io</a>
+        </p>
       </div>
 
-      <div class="card">
-        <h2>معلومات الاتصال</h2>
-        <div class="row"><span class="label">رقم الجوال:</span> <a href="tel:+966570384562">+966570384562</a></div>
-        <div class="row"><span class="label">البريد الإلكتروني:</span> <a href="mailto:t@sougks.github.io">t@sougks.github.io</a></div>
-        <div class="row"><span class="label">الموقع الإلكتروني:</span> sougks.github.io</div>
+      <div class="contact-card">
+        <h3>عنوان النشاط</h3>
+        <p>
+          طريق الملك فهد، شارع العليا،
+          الرياض 12446، المملكة العربية السعودية.
+        </p>
+        <p dir="ltr">
+          King Fahd Road, Olaya Street,
+          Riyadh 12446, Saudi Arabia.
+        </p>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="card">
-        <h2>العنوان</h2>
-        <div class="row">طريق الملك فهد، شارع العليا، الرياض 12234، المملكة العربية السعودية</div>
-        <div class="row en">King Fahd Road, Olaya Street, Riyadh, 12234, Saudi Arabia</div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>سوقك | Sougk</h3>
+        <p>
+          سوقك للتسويق والترويج الإلكتروني
+          عبر المواقع ومنصات التواصل الاجتماعي.
+        </p>
       </div>
-    </section>
+      <div>
+        <h3>روابط مهمة</h3>
+        <a href="#home">الرئيسية</a>
+        <a href="#about">من نحن</a>
+        <a href="#services">خدماتنا</a>
+        <a href="#profile">معلوماتنا</a>
+      </div>
+      <div>
+        <h3>الخدمات</h3>
+        <a href="#services">التسويق الإلكتروني</a>
+        <a href="#services">الترويج الرقمي</a>
+        <a href="#services">الإعلانات الإلكترونية</a>
+        <a href="#contact">اتصل بنا</a>
+      </div>
+    </div>
 
-    <footer>© 2026 سوقك السودان — Sougk alsudan</footer>
-  </main>
+    <div class="copyright">
+      © <span id="year"></span> سوقك - Sougk.
+      جميع الحقوق محفوظة.
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
 </body>
 </html>
